@@ -3,7 +3,11 @@ const router = express.Router();
 const User = require('../models/auth.model');
 
 router.post('/register', (req, res) => {
-    console.log(req.body);
+    const { email, password1, password2 } = req.body;
+    const newUser = new User({
+        email: email,
+        password: password1
+    });
     res.redirect('/login');
 })
 
