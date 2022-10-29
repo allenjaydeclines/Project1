@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%- include("partials/includes") %> 
+    <%- include("partials/includes") %>
     <link rel = "stylesheet" href = "/style/login-style.css">
     <script src = "/js/login.js"></script>
     <title>Login</title>
@@ -13,14 +13,14 @@
     <div class="container w-70 d-flex flex-column">
         <div class="form-group">
             <span class="title">Login</span>
-            <form action="/">
+            <form action="/auth_route/login" method="POST">
                 <div class="form-group mt-3">
                     </i><label for="exampleInputEmail1"><i class="uil uil-envelope"></i>  Email Address</label>
-                    <input type="email" class="form-control mt-2" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control mt-2" id="exampleInputEmail1" name="email"  placeholder="Enter email" required>
                 </div>
                 <div class="form-group mt-3">
                     </i><label for="exampleInputPassword1"><i class="uil uil-lock"></i>  Password</label>
-                    <input type="password" class="form-control mt-2" id="password-input" name="password" placeholder="Password">
+                    <input type="password" class="form-control mt-2" id="password-input" name="password" placeholder="Password" required>
                 </div>
                 <div class="form-check mt-3">
                     <input type="checkbox" class="form-check-input" value="true" id="checkbox" onclick="showPass()">

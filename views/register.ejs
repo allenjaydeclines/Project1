@@ -12,19 +12,22 @@
 <body>
     <div class="container w-70 d-flex flex-column">
         <div class="form-group">
+            <div>
+                <span><%  %></span>
+            </div>
             <span class="title">Register</span>
             <form action="/auth_route/register" method="POST" >
                 <div class="form-group mt-3">
                     </i><label for="reg-email"><i class="uil uil-envelope"></i>  Email Address</label>
-                    <input type="email" class="form-control mt-2" id="reg-email" name="email" placeholder="Enter email">
+                    <input type="email" class="form-control mt-2" id="reg-email" name="email" placeholder="Enter email" required>
                 </div>
                 <div class="form-group mt-3">
                     </i><label for="reg-password1"><i class="uil uil-lock"></i>  Password</label>
-                    <input type="password" class="form-control mt-2" id="reg-password1" name="password1" placeholder="Password">
+                    <input type="password" class="form-control mt-2" id="reg-password1" name="password1" placeholder="Password" required>
                 </div>
                 <div class="form-group mt-3">
                     </i><label for="reg-password2"><i class="uil uil-lock"></i>  Confirm Password</label>
-                    <input type="password" class="form-control mt-2" id="reg-password2" name="password2" placeholder="Password">
+                    <input type="password" class="form-control mt-2" id="reg-password2" name="password2" placeholder="Password" required>
                 </div>
                 <div class="form-check mt-3">
                     <input type="checkbox" class="form-check-input" value="true" id="checkbox" onclick="showPass()">
