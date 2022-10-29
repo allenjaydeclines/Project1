@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("partials/includes") %> 
+    <link rel="stylesheet" href="/style/register-style.css">
+    <script src="/js/register.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container w-70 d-flex flex-column">
+        <div class="form-group">
+            <span class="title">Register</span>
+            <form action="/auth_route/register" method="POST" >
+                <div class="form-group mt-3">
+                    </i><label for="reg-email"><i class="uil uil-envelope"></i>  Email Address</label>
+                    <input type="email" class="form-control mt-2" id="reg-email" name="email" placeholder="Enter email">
+                </div>
+                <div class="form-group mt-3">
+                    </i><label for="reg-password1"><i class="uil uil-lock"></i>  Password</label>
+                    <input type="password" class="form-control mt-2" id="reg-password1" name="password1" placeholder="Password">
+                </div>
+                <div class="form-group mt-3">
+                    </i><label for="reg-password2"><i class="uil uil-lock"></i>  Confirm Password</label>
+                    <input type="password" class="form-control mt-2" id="reg-password2" name="password2" placeholder="Password">
+                </div>
+                <div class="form-check mt-3">
+                    <input type="checkbox" class="form-check-input" value="true" id="checkbox" onclick="showPass()">
+                    <label class="form-check-label" for="exampleCheck1">Show Password</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+              </form>
+              <span>Already have an account? <a href="/login">Login now!</a></span>
+        </div>
+    </div> 
+</body>
+</html>
