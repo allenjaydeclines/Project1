@@ -11,7 +11,8 @@ const Login = async(req, res) => {
             validPass = await bycrypt.compare(password, checkUser.password);
 
             if (validPass) {
-                res.json({success: true, msg: "Logged in"});
+                console.log("Logged in success!");
+                res.redirect('/')
             }
             else {
                 res.json({success: false, msg: "Password incorrect"})
@@ -43,6 +44,7 @@ const Register = async(req, res) => {
                     email: email,
                     password: hash
                 });
+                console.log("user created!")
                 newUser.save();
             })
             res.redirect('/login');
