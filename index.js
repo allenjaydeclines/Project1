@@ -19,12 +19,17 @@ app.set('view engine', 'ejs');
 
 //routes
 const auth_route = require('./routes/auth_route')
+const inventory_route = require('./routes/inventory_route')
 app.use('/auth_route', auth_route);
+app.use('/inventory_route', inventory_route);
 
 
-app.get("/", (req, res) => { res.render('home')})
+
+
+app.get("/", (req, res) =>  res.render('home'))
 app.get("/login", (req, res) => res.render('login'))
 app.get("/register", (req, res) => res.render('register'))
+app.get("/inventory", (req, res) => res.render('inventory'))
 
 
 
