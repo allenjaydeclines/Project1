@@ -44,8 +44,8 @@ const Register = async(req, res) => {
                     email: email,
                     password: hash
                 });
-                console.log("user created!")
                 newUser.save();
+                console.log("user created!")
             })
             res.redirect('/login');
         }

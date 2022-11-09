@@ -27,7 +27,7 @@
 
             </div>
             <div class="col-auto ">
-              <a href="/" class="btn btn-outline-secondary">Add Supply</a>
+              <a href="/inventory/addsupply" class="btn btn-outline-secondary">Add Supply</a>
               <a href="/" class="btn btn-outline-secondary">Add Item</a>   
             </div>
           </div>
@@ -36,7 +36,7 @@
 
     <div class="container">
       <div class="d-flex justify-content-center align-items-center mt-2">
-        <table class="table table-hover table-borderless table-striped">
+        <table class="table table-hover table-striped">
           <thead>
             <tr>
               <th scope="col">Item Name</th>
@@ -49,15 +49,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
+            <% invents.forEach(invent => { %> 
+              <tr>
+                <td><%= invent.itemName %></td>
+                <td><%= invent.listingPrice %></td>
+                <td><%= invent.retailPrice %></td>
+                <td><%= invent.totalQuantity %></td>
+                <td><%= invent.availableQuantity%></td>
+                <td><%= invent.date %></td>
+                <td><a href="/inventory_route/delete/<%= invent._id %>" class="btn btn-danger btn-sm mx-2">Delete</a></td>
+              </tr>
+            <% }) %>  
           </tbody>
         </table>
       </div>

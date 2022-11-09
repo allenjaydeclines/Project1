@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("partials/includes") %> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center mt-3">
+          <h4 class="display-5">Add Supply</h4>
+        </div>
+    </div>
+
+    <div class="container d-flex flex-column">
+        <form action="/inventory_route/addsupply" method="POST">
+            <div class="form-group mt-4">
+                <input type="text" class="form-control" id="item-name" name="itemName"  placeholder="Item Name">
+            </div>
+            <div class="form-group mt-4">
+                <input type="number" class="form-control" id="listing-price" name="listingPrice" placeholder="Listing Price">
+            </div>
+            <div class="form-group mt-4">
+                <input type="number" class="form-control" id="retail-price" name="retailPrice" placeholder="Retail Price">
+            </div>
+            <div class="form-group mt-4">
+              <input type="number" class="form-control" id="total-quantity" name="totalQuantity" placeholder="Total Quantity">
+            </div>
+            <div class="form-group mt-4">
+              <input type="number" class="form-control" id="available-quantity"  name="availableQuantity" placeholder="Available Quantity">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-5">Add Supply</button>
+          </form>
+    </div>
+</body>
+</html>

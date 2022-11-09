@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const connectDB = require('./db/connect');
 const mongoose = require('mongoose');
+const Invent = require('./models/inventory.model');
 
 const app = express()
 
@@ -29,11 +30,11 @@ app.use('/inventory_route', inventory_route);
 app.get("/", (req, res) =>  res.render('home'))
 app.get("/login", (req, res) => res.render('login'))
 app.get("/register", (req, res) => res.render('register'))
-app.get("/inventory", (req, res) => res.render('inventory'))
-
-
-
-
+app.get('/inventory', async(req, res) => {
+    const invents = await Invent.find();
+    res.render('inventory', {invents: invents})
+})
+app.get("/inventory/addsupply", (req, res) => res.render('addsupply'))
 
 
 //start
